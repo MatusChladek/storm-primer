@@ -7,6 +7,10 @@ import org.apache.storm.tuple.Values;
 
 import java.util.Map;
 
+/**
+ * This is part of storm primer topology
+ */
+
 public class IntegerSpout extends BaseRichSpout {
     private SpoutOutputCollector spoutOutputCollector;
     private int index = 0;

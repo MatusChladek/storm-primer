@@ -1,6 +1,4 @@
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.io.input.ClassLoaderObjectInputStream;
-import org.apache.commons.lang.CharSet;
 import org.apache.storm.spout.SpoutOutputCollector;
 import org.apache.storm.task.TopologyContext;
 import org.apache.storm.topology.OutputFieldsDeclarer;
