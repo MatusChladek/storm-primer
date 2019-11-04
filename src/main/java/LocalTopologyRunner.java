@@ -7,7 +7,7 @@ import org.apache.storm.tuple.Fields;
 import org.apache.storm.utils.Utils;
 
 public class LocalTopologyRunner {
-    private static final int TEN_MINUTES = 600000;
+    private static final int OVERFLOW_LIMIT = 600;
 
     public static void main(String[] args) {
         TopologyBuilder builder = new TopologyBuilder();
@@ -33,7 +33,7 @@ public class LocalTopologyRunner {
                     config,
                     topology);
 
-            Utils.sleep(TEN_MINUTES);
+            Utils.sleep(OVERFLOW_LIMIT);
             cluster.killTopology("github-commit-count-topology");
             cluster.shutdown();
         } catch (Exception e) {
